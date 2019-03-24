@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Add / Delete</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<h1>List of Items</h1>
+	<ul id="items"></ul>
+	<input type="text" id="newText" />
+	<input type="button" value="Add" onclick="addItem()">
+	<script>
+		function addItem() {
+
+			let $input = $('#newText');
+			let $listItem = $('<li>').text($input.val() + ' ');
+			let $deleteLink = $('<a href="#">[Delete]</a>').click(deleteItem);
+
+			$listItem.append($deleteLink);
+
+			$('#items').append($listItem);
+
+			$input.val('');
+
+			function deleteItem() {
+
+				$(this).parent().remove();
+			}
+		}
+	</script>
+
+</body>
+
+</html>

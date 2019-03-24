@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Dynamic Validation</title>
+	<style>
+		.error {
+			border: 2px solid red;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+
+<body onload="validate()">
+	<label for="email">Enter email:</label>
+	<input id="email" type="text" />
+	<script>
+		function validate() {
+
+			let $email = $('input').change(onInputChange);
+
+			function onInputChange() {
+
+				if (/^[a-z]+@[a-z]+\.[a-z]+$/.test($email.val())) {
+
+					$email.removeClass('error');
+				}
+				else {
+
+					$email.addClass('error');
+				}
+			}
+		}
+	</script>
+</body>
+
+</html>
