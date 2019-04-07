@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Books</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div>
+		<h1>Books List</h1>
+		<ul id="booksList"></ul>
+	</div>
+	<div class="hidden">
+		<h2>Edit Book</h1>
+			Book Title: <input type="text" id="editTitle"><br>
+			Book Author: <input type="text" id="editAuthor"><br>
+			ISBN: <input type="text" id="editIsbn"><br>
+			<button id="editBook">Edit Book</button>
+	</div>
+	<div>
+		<hr>
+		<h1>Create Book</h1>
+		Book Title: <input type="text" id="bookTitle" placeholder="Book Title..."><br>
+		Book Author: <input type="text" id="bookAuthor" placeholder="Book Author..."><br>
+		ISBN: <input type="text" id="isbn" placeholder="ISBN..."><br>
+		<button id="createBook">Create Book</button>
+	</div>
+	<script src="books.js"></script>
+	<script>$(document).ready(attachEvents)</script>
+</body>
+
+</html>

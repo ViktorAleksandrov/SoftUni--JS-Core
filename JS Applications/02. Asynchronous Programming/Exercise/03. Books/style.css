@@ -1,0 +1,15 @@
+div {
+	margin: 20px
+}
+
+button, input {
+	margin: 5px
+}
+
+.edit {
+	display: block;
+}
+
+.hidden {
+	display: none;
+}
